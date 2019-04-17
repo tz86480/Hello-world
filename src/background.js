@@ -1,10 +1,26 @@
 "use strict";
 
-import { app, protocol, BrowserWindow, globalShortcut } from "electron";
+import {
+  app,
+  protocol,
+  BrowserWindow,
+  globalShortcut,
+  autoUpdater
+} from "electron";
 import {
   createProtocol,
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
+
+const server = "https://your-deployment-url.com";
+const feed = `${server}/update/${process.platform}/${app.getVersion()}`;
+
+autoUpdater.setFeedURL(feed);
+
+setInterval(() => {
+  autoUpdater.checkForUpdates();
+}, 60000);
+
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 // Keep a global reference of the window object, if you don't, the window will
