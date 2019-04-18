@@ -18,6 +18,7 @@ const feed = `${server}/update/${app.getVersion()}`;
 autoUpdater.setFeedURL(feed);
 
 console.log(autoUpdater);
+console.log(autoUpdater.checkForUpdates());
 
 setInterval(() => {
   autoUpdater.checkForUpdates();
