@@ -13,7 +13,7 @@ import {
 } from "vue-cli-plugin-electron-builder/lib";
 
 const server = "https://github.com/tz86480/Electron---.git";
-const feed = `${server}/update/${app.getVersion()}`;
+const feed = `${server}/update/hello-world Setup 0.1.1.exe`;
 
 autoUpdater.setFeedURL(feed);
 
