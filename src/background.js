@@ -12,14 +12,16 @@ import {
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
 
-const server = "https://your-deployment-url.com";
-const feed = `${server}/update/${process.platform}/${app.getVersion()}`;
+const server = "https://github.com/tz86480/Electron---.git";
+const feed = `${server}/update/${app.getVersion()}`;
 
 autoUpdater.setFeedURL(feed);
 
+console.log(autoUpdater);
+
 setInterval(() => {
   autoUpdater.checkForUpdates();
-}, 60000);
+}, 1000);
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
