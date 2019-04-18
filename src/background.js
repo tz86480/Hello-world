@@ -12,7 +12,7 @@ import {
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
 
-const server = "https://github.com/tz86480/Electron---.git";
+const server = "https://github.com/tz86480/Hello-world.git";
 const feed = `${server}/update/hello-world Setup 0.1.1.exe`;
 
 autoUpdater.setFeedURL(feed);
